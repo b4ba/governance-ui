@@ -11,8 +11,16 @@ import cx from '@hub/lib/cx';
 import * as sig from '@hub/lib/signature';
 import * as RE from '@hub/types/Result';
 
+// const getClaim = gql`
+//   mutation getClaim($publicKey: PublicKey!, $project: String) {
+//     createAuthenticationClaim(publicKey: $publicKey) {
+//       claim
+//     }
+//   }
+// `;
+
 const getClaim = gql`
-  mutation getClaim($publicKey: PublicKey!, $project: String) {
+  mutation getClaim($publicKey: PublicKey!) {
     createAuthenticationClaim(publicKey: $publicKey) {
       claim
     }
