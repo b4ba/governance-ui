@@ -12,7 +12,7 @@ import * as sig from '@hub/lib/signature';
 import * as RE from '@hub/types/Result';
 
 const getClaim = gql`
-  mutation getClaim($publicKey: PublicKey!) {
+  mutation getClaim($publicKey: PublicKey!, $project: String) {
     createAuthenticationClaim(publicKey: $publicKey) {
       claim
     }

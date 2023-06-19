@@ -27,6 +27,7 @@ const getCurrentStep = (jwt: string | null, oauthCode: string | null) => {
 interface Props {
   application: Application;
   discordCode: string | null;
+  project: string | null;
 }
 
 const VerifyWallet = (props: Props) => {
